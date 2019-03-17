@@ -18,7 +18,8 @@ app.set("view engine", "ejs");
 //Routes
 app.get("/", function(req, res){
     
-    res.render("home");
+    console.log("SERVER UP");
+    //res.render("home");
 
 });
 
