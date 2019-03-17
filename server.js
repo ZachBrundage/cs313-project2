@@ -14,10 +14,8 @@ app.get("/", function(req, res) {
            console.log("ERROR");
            console.log(err);
        }
-    res.write(result.rows);
+    res.send(result);
     });
-    
-    res.end();
 });
 
 app.listen(port, function() {
