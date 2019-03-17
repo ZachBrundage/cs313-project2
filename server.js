@@ -34,8 +34,8 @@ app.get("/getExpenses", function(req, res) {
            console.log("ERROR");
            console.log(err);
        }
-        var budgetId = result.rows["budget_id"];
-        res.write(budgetId);
+        console.log(results.rows[0]);
+        res.write("Query Worked!!!");
         res.end();
     });
 });
