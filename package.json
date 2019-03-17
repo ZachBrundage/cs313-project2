@@ -1,0 +1,22 @@
+{
+  "name": "cs313-project2",
+  "version": "1.0.0",
+  "description": "CS313 Project 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZachBrundage/cs313-project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZachBrundage/cs313-project2/issues"
+  },
+  "homepage": "https://github.com/ZachBrundage/cs313-project2#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
