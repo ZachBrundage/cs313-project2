@@ -14,11 +14,9 @@ app.get("/", function(req, res) {
            console.log("ERROR");
            console.log(err);
        }
-    console.log("RESULT: ");
-    console.log(result.rows);
+    res.write(result.rows);
     });
     
-	res.write("Nigga we made it");
     res.end();
 });
 
