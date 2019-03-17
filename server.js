@@ -34,7 +34,9 @@ app.get("/getExpenses", function(req, res) {
            console.log("ERROR");
            console.log(err);
        }
-    res.send(result);
+    var parsed = JSON.parse(result);
+    res.write(parsed);
+    res.end();
     });
 });
 
