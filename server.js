@@ -1,11 +1,28 @@
+// Dependencies
 var express = require("express");
 var {Pool} = require('pg');
 var app = express();
+
+// Server Port
 var port = process.env.PORT || 8080;
+
+
+// Heroku DB connection 
 var connectionString = process.env.DATABASE_URL || "postgres://vekibicpuuxhkl:36e1e13b194f3377e312588f4dd9808cdb67008c08bc55f20a8de12f816457b1@ec2-54-197-232-203.compute-1.amazonaws.com:5432/df5pn8ffgdhg87?ssl=true";
 var pool = new Pool({connectionString: connectionString});
 
-app.get("/", function(req, res) {
+// View Setup
+app.set("views", "views");
+app.set("view engine", "ejs");
+
+//Routes
+app.get("/", function(req, res){
+    
+    res.render("home");
+
+});
+
+app.get("/getExpenses", function(req, res) {
 	
     var sql = "SELECT * FROM expenses";
     
@@ -18,6 +35,7 @@ app.get("/", function(req, res) {
     });
 });
 
+// Server Listening
 app.listen(port, function() {
     console.log("The server is on port 8080");
 });
