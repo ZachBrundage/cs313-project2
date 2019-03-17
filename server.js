@@ -35,8 +35,7 @@ app.get("/getExpenses", function(req, res) {
            console.log(err);
        }
         console.log(result.rows[0]);
-        res.write("Query Successful");
-        res.end();
+        res.send(result);
     });
 });
 
