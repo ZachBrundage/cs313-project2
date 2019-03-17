@@ -12,6 +12,7 @@ var connectionString = process.env.DATABASE_URL || "postgres://vekibicpuuxhkl:36
 var pool = new Pool({connectionString: connectionString});
 
 // View Setup
+app.use(express.static("public"));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
