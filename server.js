@@ -19,7 +19,8 @@ app.set("view engine", "ejs");
 app.get("/", function(req, res){
     
     console.log("SERVER UP");
-    //res.render("home");
+    res.write("WORKING");
+    res.end();
 
 });
 
