@@ -25,6 +25,12 @@ app.get("/", function(req, res){
 
 });
 
+app.get("/setup", function(req, res){
+    
+    res.render("setup");
+
+});
+
 app.get("/getExpenses", function(req, res) {
 	
     var sql = "SELECT * FROM expenses";
