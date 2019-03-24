@@ -2,8 +2,33 @@
 <html>
     <head>
         <title> Project Home</title>
+        <script type="text/javascript" src="expenses.js"></script>
     </head>
     <body>
         <h1>Monthly Income: <%= monthly %> </h1>
+        <h1>Lets define your expenses</h1>
+        <div id="expList">
+            <form action="/actuals" method="post">
+                <input type="text" value="Name the Expense" name="nameOne">
+                Forecast Cost: <input type="number" step="0.01" name="priceOne"><br><br>
+
+                <input type="text" value="Name the Expense" name="nameTwo">
+                Forecast Cost: <input type="number" step="0.01" name="priceTwo"><br><br>
+
+                <input type="text" value="Name the Expense" name="nameThree">
+                Forecast Cost: <input type="number" step="0.01" name="priceThree"><br><br>
+
+                <input type="text" value="Name the Expense" name="nameFour">
+                Forecast Cost: <input type="number" step="0.01" name="priceFour"><br><br>
+
+                <input type="text" value="Name the Expense" name="nameFive">
+                Forecast Cost:<input type="number" step="0.01" name="priceFive"><br><br>
+
+                <input type="text" value="Name the Expense" name="nameSix">
+                Forecast Cost: <input type="number" step="0.01" name="priceSi"><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </body>
 </html>
