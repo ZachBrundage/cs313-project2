@@ -2,6 +2,7 @@
 var express = require("express");
 var {Pool} = require('pg');
 var app = express();
+var bodyParser = require("body-parser");
 
 // Server Port
 var port = process.env.PORT || 8080;
@@ -31,6 +32,19 @@ app.get("/setup", function(req, res){
 
 });
 
+app.post("/expenses", function(req, res){
+    
+    var salary = req.body.salary;
+    var fed = req.body.fit;
+    var state = req.body.sit;
+    var social = req.body.ss;
+    
+    var monthlyIncome = calculateMonthly(salary, fed, state, social);
+    var params = {monthly: monthlyIncome};
+    res.render("expenses", params);
+
+});
+
 app.get("/getExpenses", function(req, res) {
 	
     var sql = "SELECT * FROM expenses";
@@ -49,3 +63,9 @@ app.get("/getExpenses", function(req, res) {
 app.listen(port, function() {
     console.log("The server is on port 8080");
 });
+
+// Controller
+function calculateMonthly(salary, fed, state, social){
+    var monthly = (salary / 12) - fed - state - social;
+    return monthly;
+}
