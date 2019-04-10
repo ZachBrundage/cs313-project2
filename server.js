@@ -241,18 +241,24 @@ app.get("/selectBudgetToDelete", function(req, res){
 app.post("/deleteBudget", function(req, res){
 
     var budgetNum = Number(req.body.budgetId);
-    var sql = "DELETE FROM budgets WHERE budget_id =" + budgetNum + "AND user_id =" + userID;
-    console.log(sql);
-    pool.query(sql, function(err, result) {
+    var sqlOne = "DELETE FROM expenses WHERE budget_id =" + budgetNum;
+    pool.query(sqlOne, function(err, result) {
     // If an error occurred...
         if (err) {
             console.log("Error in query: ")
             console.log(err);
         };
+        var sql = "DELETE FROM budgets WHERE budget_id =" + budgetNum + "AND user_id =" + userID;
+        console.log(sql);
+        pool.query(sql, function(err, result) {
+        // If an error occurred...
+        if (err) {
+            console.log("Error in query: ")
+            console.log(err);
+        };
         res.render("deleteSuccess");
-
+        });
     });
-
 });
 
 // Server Listening
