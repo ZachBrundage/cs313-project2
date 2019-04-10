@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function toNewBudget(){
+                var form = document.getElementById("toNewBudget");
+                form.submit()
+            }
+            function viewBudget(){
+                var form = document.getElementById("viewBudget");
+                form.submit()
+            }
+            function deleteBudget(){
+                var form = document.getElementById("deleteBudget");
+                form.submit()
+            }
+        </script>
+    </head>
+    <body>
+        <div class="back-image">
+            <div class="center">
+                <div class="row">
+                    <div class="containerH">
+                        <h1>Project 2 - Budget Manager</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <form action="/newBudget" method="get" id="toNewBudget"></form>
+                    <div class="container" onclick="toNewBudget()">Create New Budget</div>
+                </div>
+                <div class="row">
+                    <form action="/selectBudget" method="get" id="viewBudget"></form>
+                    <div class="container" onclick="viewBudget()">View Existing Budget</div>
+                </div>
+                <div class="row">
+                    <form action="/selectBudgetToDelete" method="get" id="deleteBudget"></form>
+                    <div class="container" onclick="deleteBudget()">Delete Budget</div>
+                </div>
+                <div class="row">
+                    <div class="containerH">
+                        <h2>Your Budget Ids: <%= budgets%></h2>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+            </div>
+        </div>
+    </body>
+</html>

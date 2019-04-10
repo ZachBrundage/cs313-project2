@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function submitNewUser(){
+                var form = document.getElementById("toLogin");
+                form.submit();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="back-image">
+            <div class="center">
+                <div class="row">
+                    <div class="containerH">
+                        <h1>Registration: Success</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container" onclick=submitNewUser()>
+                        <form action="/" method="get" id="toLogin">
+                        </form>
+                        Back To Login
+                    </div>
+                </div>
+                <div class="spacer"></div>
+            </div>
+        </div>
+    </body>
+</html>

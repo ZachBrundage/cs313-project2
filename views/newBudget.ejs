@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function postNewBudget(){
+                var form = document.getElementById("postNewBudget");
+                form.submit();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="back-image">
+            <div class="center">
+                <div class="row">
+                    <div class="containerH">
+                        <h1>New Budget Setup</h1>
+                    </div>
+                </div>
+                <form action="/expenses" method="post" id="postNewBudget">
+                    <div class="row">
+                        <input type="number" name="yrly" class="inp" value=""> Yearly Income
+                    </div>
+                    <div class="row">
+                        <div class="containerH">
+                            <h2>Monthly Deductions</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="number" name="fed" class="inp"> Federal Income Tax
+                    </div> 
+                    <div class="row">
+                        <input type="number" name="stt" class="inp"> State Income Tax
+                    </div>
+                    <div class="row">
+                        <input type="number" name="med" class="inp"> Medicare
+                    </div>
+                    <div class="row">
+                        <input type="number" name="ssc" class="inp"> Social Security
+                    </div>
+                    <div class="row">
+                        <div class="container" onclick="postNewBudget()">Create Budget</div>
+                    </div>
+                    <div class="spacer"></div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

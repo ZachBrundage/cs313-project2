@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function submitNewUser(){
+                var form = document.getElementById("newUserForm");
+                form.submit();
+            }
+            
+            function login(){
+                var form = document.getElementById("login");
+                form.submit();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="back-image">
+            <div class="center">
+                <div class="row">
+                    <div class="containerH">
+                        <h1>Log In</h1>
+                    </div>
+                </div>
+                <form action="/verify" method="post" id="login">
+                    <div class="row">
+                        <input type="text" name="username" class="inp" value="Username">
+                    </div>
+                    <div class="row">
+                        <input type="password" name="password" class="inp" value="Password">
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="container" onclick="login()">Log In</div>
+                </div>
+                <div class="row">
+                    <div class="container" onclick=submitNewUser()>
+                        <form action="/newUser" method="get" id="newUserForm">
+                        </form>
+                        New User
+                    </div>
+                </div>
+                <div class="spacer"></div>
+            </div>
+        </div>
+    </body>
+</html>

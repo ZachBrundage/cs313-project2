@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function toDash(){
+                var form = document.getElementById("dash");
+                form.submit();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="back-image">
+            <div class="center">
+                <div class="row">
+                    <div class="containerH">
+                        <h1>Expenses</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <th>Expense</th>
+                            <th>Cost</th>
+                        </tr>
+                        <tr>
+                            <td>Rent/Mortgage</td>
+                            <td><%= Rent%></td>
+                        </tr>
+                        <tr>
+                            <td>Car Payment</td>
+                            <td><%= Car%></td>
+                        </tr>
+                        <tr>
+                            <td>Insurance</td>
+                            <td><%= Insurance%></td>
+                        </tr>
+                        <tr>
+                            <td>Utilities</td>
+                            <td><%= Utilities%></td>
+                        </tr>
+                        <tr>
+                            <td>Gas</td>
+                            <td><%= Gas%></td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td><%= Phone%></td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td><%= Food%></td>
+                        </tr>
+                        <tr>
+                            <td>Entertainment</td>
+                            <td><%= Entertainment%></td>
+                        </tr>
+                        <tr>
+                            <td>Tuition</td>
+                            <td><%= Tuition%></td>
+                        </tr>
+                        <tr>
+                            <td>Tithing</td>
+                            <td><%= Tithing%></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <form action="/dash" method="get" id="dash"></form>
+                    <div class="container" onclick="toDash()">Back To Dashboard</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

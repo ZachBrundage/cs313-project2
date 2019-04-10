@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function viewExpenses() {
+                var form = document.getElementById("viewExpenses");
+                form.submit();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="back-image">
+            <div class="center">
+                <div class="row">
+                    <div class="containerH">
+                        <h1>Budget View</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="containerH">
+                        <h2>Budget Id: <%= budgetId%></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="containerH">
+                        <h2>Yearly Income: <%= grossIncome%></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="containerH">
+                        <h2>Total Deductions: <%= totalDeductions%></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="containerH">
+                        <h2>Monthly Income: <%= netMonthly%></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <form action="/viewExpenses" method="get" id="viewExpenses"></form>
+                    <div class="container" onclick="viewExpenses()">View Expenses</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

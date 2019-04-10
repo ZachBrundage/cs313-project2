@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function submitNewUser(){
+                var form = document.getElementById("postNewUser");
+                form.submit();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="back-image">
+            <div class="center">
+                <div class="row">
+                    <div class="containerH">
+                        <h1>Create New User</h1>
+                    </div>
+                </div>
+                <form action="/postNewuser" method="post" id="postNewUser">
+                    <div class="row">
+                        <input type="text" name="username" class="inp" value="Username">
+                    </div>
+                    <div class="row">
+                        <input type="password" name="password" class="inp" value="Password">
+                    </div>
+                    <div class="row">
+                        <div class="container" onclick="submitNewUser()">Register</div>
+                    </div>
+                    <div class="spacer"></div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

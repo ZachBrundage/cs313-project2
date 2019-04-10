@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function viewBudget(){
+                var form = document.getElementById("viewBudget");
+                form.submit();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="back-image">
+            <div class="center">
+                <div class="row">
+                    <div class="containerH">
+                        <h1>Enter your Budget Id</h1>
+                    </div>
+                </div>
+                <form action="/view" method="post" id="viewBudget">
+                    <div class="row">
+                        <input type="number" name="budgetId" class="inp">
+                    </div>
+                    <div class="row">
+                        <div class="container" onclick="viewBudget()">View</div>
+                    </div>
+                    <div class="spacer"></div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
